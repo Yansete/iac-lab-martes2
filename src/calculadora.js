@@ -1,5 +1,7 @@
+const esNumero = (valor) => typeof valor === 'number';
+
 export function suma(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
+    if (!esNumero(a) || !esNumero(b)) {
         throw new Error('ERROR: los valores deben ser numéricos');
     }
 
